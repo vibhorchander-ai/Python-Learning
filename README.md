@@ -10,7 +10,9 @@ python-learning/
 ├── requirements.txt
 ├── .gitignore
 ├── notebooks/
-│   └── first_program.ipynb
+│   ├── first_program.ipynb
+│   ├── types_python.ipynb         # Examples showing Python types: int, float, str
+│   └── variable_expression.examples.ipynb  # Expressions, operator precedence, and variables
 ├── notes/
 │   └── learning_notes.md
 ├── src/
