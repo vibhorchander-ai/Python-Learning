@@ -5,13 +5,14 @@ This repository contains my beginner Python notes, scripts, and learning files a
 ## Project Structure
 
 ```text
-python-learning/
+Python Learning/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
 ├── notebooks/
 │   ├── first_program.ipynb
-│   ├── types_python.ipynb         # Examples showing Python types: int, float, str
+│   ├── string_examples.ipynb      # String slicing, split, find, and help() examples
+│   ├── types_example.ipynb        # Examples showing Python types: int, float, str
 │   └── variable_expression.examples.ipynb  # Expressions, operator precedence, and variables
 ├── notes/
 │   └── learning_notes.md
@@ -35,7 +36,7 @@ The goal of this repository is to:
 
 ## How to Run
 ```bash
-python src/hello_world.py
+python3 src/hello_world.py
 ```
 
 ## How to Test
@@ -53,3 +54,24 @@ pytest
 
 ## Status
 In progress - learning and practicing Python fundamentals.
+
+## Sample Output
+
+Run the example script:
+```bash
+python3 src/hello_world.py
+```
+Expected output:
+```text
+Hello, World\!
+```
+
+Run the tests:
+```bash
+python3 -m pytest -q
+```
+Example test output:
+```text
+.                                                                        [100%]
+1 passed in 0.00s
+```
