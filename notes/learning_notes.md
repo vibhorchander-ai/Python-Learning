@@ -1,37 +1,63 @@
 # Learning Notes
 
-This folder contains concise notes and highlights from my Python learning journey.
+## Strings
 
-## Summary
+- Slicing: `s[start:stop]` returns characters from `start` up to (but not including) `stop`.
+	```python
+	Name = "The BodyGuard"
+	Name[0:5]  # 'The '
+	Name[::2]  # every second character
+	```
 
-- Focus: Python fundamentals, data structures, basic scripting, and testing.
-- Tools used: Python 3, Jupyter notebooks, pytest, and Git.
+- Useful methods:
+	- `split()` — splits a string into a list of words.
+	- `find(sub)` — returns the starting index of `sub` or `-1` if not found.
 
-## Skills Demonstrated
+## Lists
 
-- Reading and manipulating strings (slicing, split, find).
-- Working with lists: creation, indexing, slicing, mutation, extend vs append, and nested lists.
-- Writing small scripts with a `main()` entrypoint and simple docstrings.
-- Basic testing with `pytest` and capturing stdout for assertions.
+- Creation: lists can hold mixed types.
+	```python
+	my_first_list = ['Hello World', 42, 3.14, True]
+	```
 
-## Project Highlights
+- Mutability: lists are mutable — assign by index to update a value.
+	```python
+	A = ['disco', 10, 1.2]
+	A[0] = 'Hello World!'
+	```
 
-- `src/hello_world.py`: small script demonstrating module entrypoint and docstring usage.
-- `notebooks/`: interactive examples showing string and list manipulations, with comments and explanations.
+- `append()` vs `extend()`:
+	- `append(x)` adds `x` as a single element.
+	- `extend(iterable)` adds each element from `iterable` individually.
+	```python
+	L = ['Michael Jackson', 10.2]
+	L.extend(['pop', 10])   # ['Michael Jackson', 10.2, 'pop', 10]
+	L.append(['pop1', 11])  # last element is the list ['pop1', 11]
+	```
 
-## How to run / reproduce
+- Slicing and nested lists: access nested elements with additional indices, use slice notation for sublists.
 
-Install dependencies (if needed):
-```bash
-python3 -m pip install --user pytest
-```
+## Tuples
 
-Run the example script:
-```bash
-python3 src/hello_world.py
-```
+- Tuples are immutable ordered sequences, created with parentheses: `t = (1, 2, 3)`.
 
-Run tests:
-```bash
-python3 -m pytest -q
-```
+## Expressions and Variables
+
+- Arithmetic operators: `+ - * / //` (floor division). Parentheses alter precedence.
+	```python
+	30 + 2 * 60   # 150
+	(30 + 2) * 60 # 1920
+	```
+
+## Testing (pytest)
+
+- Capturing stdout example pattern:
+	```python
+	from src.hello_world import main
+
+	def test_main(capsys):
+			main()
+			captured = capsys.readouterr()
+			assert captured.out.strip() == "Hello, World\\!"
+	```
+

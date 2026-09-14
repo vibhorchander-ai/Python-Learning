@@ -55,6 +55,16 @@ pytest
 ## Status
 In progress - learning and practicing Python fundamentals.
 
+## Portfolio Summary
+
+- Short summary of contents: interactive notebooks demonstrating basic Python concepts (strings, lists, variables, expressions) and a small example script under `src/`.
+- See `notes/learning_notes.md` for detailed concept notes and runnable snippets.
+- How to run:
+	```bash
+	python3 src/hello_world.py
+	python3 -m pytest -q
+	```
+
 ## Sample Output
 
 Run the example script:
