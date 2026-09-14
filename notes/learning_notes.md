@@ -75,6 +75,33 @@
 	- Using mutable objects as keys raises `TypeError`.
 	- Modifying a dictionary while iterating its keys can lead to runtime errors — iterate over a static list like `list(d.keys())` when mutating.
 
+## Sets
+
+- A *set* is an unordered collection of unique, hashable elements. Use curly braces or the `set()` constructor.
+
+- Creation examples:
+	```python
+	s = {1, 2, 3}
+	t = set([1, 2, 2, 3])  # duplicates removed -> {1, 2, 3}
+	```
+
+- Common methods and operations:
+	- `add(elem)`, `remove(elem)`, `discard(elem)` (no error if absent), `pop()`
+	- `union(other)`, `intersection(other)`, `difference(other)`, `symmetric_difference(other)`
+	- `issubset(other)`, `issuperset(other)`, `isdisjoint(other)`
+
+- Membership test is efficient (average O(1)): `elem in s`.
+
+- Set comprehensions:
+	```python
+	evens = {n for n in range(10) if n % 2 == 0}
+	```
+
+- Important notes:
+	- Elements must be hashable; lists cannot be elements but tuples can.
+	- Sets are unordered; do not rely on element order.
+	- Use `frozenset` for an immutable, hashable set suitable as a dictionary key.
+
 
 ## Expressions and Variables
 
