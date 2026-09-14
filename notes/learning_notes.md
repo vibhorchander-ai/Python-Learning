@@ -41,6 +41,41 @@
 
 - Tuples are immutable ordered sequences, created with parentheses: `t = (1, 2, 3)`.
 
+## Dictionaries
+
+- Dictionaries store key-value pairs and are created with curly braces: `d = {'a': 1, 'b': 2}`.
+
+- Key requirements:
+	- Keys must be hashable (immutable types like strings, numbers, or tuples). Mutable types like lists cannot be used as keys.
+
+- Common operations:
+	- Access: `d[key]` returns the value for `key` (KeyError if missing).
+	- Safe access: `d.get(key, default)` returns `default` when `key` is absent.
+	- Add/update: `d[new_key] = value` sets or updates a mapping.
+	- Delete: `del d[key]` removes the key-value pair.
+
+- Useful views and methods:
+	- `d.keys()` — view of all keys
+	- `d.values()` — view of all values
+	- `d.items()` — view of (key, value) pairs useful for iteration
+	- `d.clear()` — remove all items
+	- `d.pop(key[, default])` — remove and return value, or return default if provided
+
+- Iteration patterns:
+	- `for k in d:` iterates keys
+	- `for v in d.values():` iterates values
+	- `for k, v in d.items():` iterates both
+
+- Comprehension example:
+	```python
+	squares = {n: n*n for n in range(6)}  # {0:0, 1:1, 2:4, ...}
+	```
+
+- Common pitfalls:
+	- Using mutable objects as keys raises `TypeError`.
+	- Modifying a dictionary while iterating its keys can lead to runtime errors — iterate over a static list like `list(d.keys())` when mutating.
+
+
 ## Expressions and Variables
 
 - Arithmetic operators: `+ - * / //` (floor division). Parentheses alter precedence.
