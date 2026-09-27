@@ -96,7 +96,44 @@ Python evaluates expressions in a predictable order.
 
 The parentheses change the order of operations, so they can change the final value.
 
-## 8. Loops
+## 8. File handling
+
+To work with files in Python, we first open them using the `open()` function.
+
+```python
+file = open("example.txt", "r")
+```
+
+The `open()` function takes the file name and a mode such as:
+
+- `"r"` for reading
+- `"w"` for writing
+- `"a"` for appending
+
+A second way to open a file is with `with open(...) as file:`. This is recommended because Python automatically closes the file when the block ends, so we do not need to close it manually.
+
+```python
+with open("example.txt", "r") as file:
+    content = file.read()
+```
+
+The `readlines()` method reads the whole file and stores each line as a separate item in a list.
+
+```python
+with open("example.txt", "r") as file:
+    lines = file.readlines()
+    print(lines)
+```
+
+The `readline()` method reads one line at a time, and can read only one line at most per call.
+
+```python
+with open("example.txt", "r") as file:
+    first_line = file.readline()
+    print(first_line)
+```
+
+## 9. Loops
 
 Loops help repeat actions without writing the same code multiple times.
 
