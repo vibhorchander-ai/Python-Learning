@@ -257,7 +257,32 @@ def test_main(capsys):
 
 This pattern captures printed output and compares it with the expected string.
 
-## 12. Summary
+## 12. Pandas
+
+Pandas is an open source data manipulation and analysis library for the Python Programming Language.
+
+Pandas offers a 2-D, mutable size, heterogeneous table data structure.
+
+A `DataFrame` is a table-like structure, and a `Series` is a one-dimensional labeled array in Pandas.
+
+```python
+import pandas as pd
+
+student_data = {
+    'Student': ['David', 'Samuel'],
+    'Age': [27, 24]
+}
+
+df = pd.DataFrame(student_data)
+print(df)
+
+ages = df['Age']
+print(type(ages))
+```
+
+This is useful for working with tabular data, filtering rows, and analyzing information efficiently.
+
+## 13. Summary
 
 The main ideas from the notebooks are:
 
@@ -267,5 +292,6 @@ The main ideas from the notebooks are:
 - catch errors with `try` and `except`
 - organize code with classes and objects
 - verify behavior with tests
+- use pandas for data manipulation and analysis
 
 This is a solid beginner foundation for Python learning and practice.
