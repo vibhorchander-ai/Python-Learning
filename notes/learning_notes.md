@@ -257,13 +257,40 @@ def test_main(capsys):
 
 This pattern captures printed output and compares it with the expected string.
 
-## 12. Pandas
+## 12. NumPy
 
-Pandas is an open source data manipulation and analysis library for the Python Programming Language.
+NumPy is the foundation for Pandas.
 
-Pandas offers a 2-D, mutable size, heterogeneous table data structure.
+NumPy stores data of a similar type and is commonly used for numerical operations.
 
-A `DataFrame` is a table-like structure, and a `Series` is a one-dimensional labeled array in Pandas.
+Operations in NumPy include:
+- sum
+- subtract
+- multiply
+- standard deviation
+- mean
+- scalar multiplication
+- divide
+
+A 2-D NumPy array is a table-like structure made of rows and columns of the same type.
+
+```python
+import numpy as np
+
+arr = np.array([[1, 2], [3, 4]])
+print(arr)
+print(arr.mean())
+```
+
+This is useful for working with numeric data, matrices, and vectorized calculations efficiently.
+
+## 13. Pandas
+
+Pandas is an open source data manipulation and analysis library for the Python programming language.
+
+Pandas offers a 2-D, mutable-size, heterogeneous table data structure.
+
+A `Series` is a one-dimensional labeled array in Pandas, and a `DataFrame` is a 2-D labeled table.
 
 ```python
 import pandas as pd
@@ -282,7 +309,22 @@ print(type(ages))
 
 This is useful for working with tabular data, filtering rows, and analyzing information efficiently.
 
-## 13. Summary
+## 14. REST API
+
+REST APIs allow applications to communicate with other services over the Internet.
+
+The `requests` module in Python can be used to interact with HTTP protocols and send requests to APIs.
+
+```python
+import requests
+
+response = requests.get("https://www.ibm.com/")
+print(response.status_code)
+```
+
+This is useful for retrieving data from online services and integrating different systems.
+
+## 15. Summary
 
 The main ideas from the notebooks are:
 
@@ -292,6 +334,8 @@ The main ideas from the notebooks are:
 - catch errors with `try` and `except`
 - organize code with classes and objects
 - verify behavior with tests
+- use NumPy for numerical arrays and calculations
 - use pandas for data manipulation and analysis
+- use REST APIs and the `requests` module to exchange data over HTTP
 
 This is a solid beginner foundation for Python learning and practice.
